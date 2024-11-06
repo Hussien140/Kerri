@@ -1,0 +1,283 @@
+/* fonts */
+body {
+    font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Used Colors */
+:root {
+    --main-color: #e6657e;
+    --secandary-color: #6c757d;
+}
+.color {
+    color: var(--main-color);
+}
+/* golbal for all sections */
+section {
+    padding: 80px 0px;
+}
+/* ========================NavBar==================== */
+.navbar-nav li a {
+    color: #000;
+    transition: all 0.3s;
+}
+.navbar-nav li a:hover {
+    color: var(--main-color);
+}
+.navbar-nav li a.active {
+    color: var(--main-color) !important;
+}
+/* =================home========== */
+#home {
+    background: url(../imgs/header-bg.jpg) center scroll no-repeat;
+    background-size: cover; 
+}
+#home .overlay {
+    min-height: 100vh;
+}
+.home-content a {
+    all: unset;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 15px 25px;   
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: bold;
+}
+.home-content a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.bounce-out-down {
+    width: 35px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid var(--main-color);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce-out-down 1s linear infinite;
+}
+@keyframes bounce-out-down {
+    0% {
+        bottom: 20px;
+    }
+    50% {
+        bottom: 40px;
+    }
+
+    100% {
+        bottom: 20px;
+    }
+}
+.bounce-out-down::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 12px;
+    border-radius: 50px;
+    background-color: white;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid white;
+}
+
+.arrow-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
+}
+
+.setting {
+    width: 35px;
+    height: 40px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 0px;
+    color: white;
+    background-color: var(--main-color);
+}
+
+/*====================== About Me ====================== */
+.about-content span {
+    color: var(--main-color)
+}
+.about-content p {
+    color: var(--secandary-color);
+    width: 86%;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #d4d4d4;
+    font-size: 1.3rem;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.icon:hover {
+    border: 2px solid var(--main-color);
+    color: var(--main-color)
+}
+
+/* card */
+
+.card h4::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 50px;
+    height: 3px;
+    border: 2px solid var(--main-color);
+    transition: all 0.5s;
+}
+
+.card:hover h4::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 100px;
+    height: 3px;
+    border: 2px solid var(--main-color);
+}
+
+/* ==============Hire me section============== */
+.main-btn {
+    all: unset;
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+} 
+a.main-btn:hover{
+    background-color: #d8576f;
+    border-color: #d8576f;
+}
+
+
+/* ========== Client Section Carousel ================*/
+.carousel-indicators [data-bs-target] {
+    background-color: var(--main-color);
+    height: 5px;
+    width: 15px;
+    border: 0px;
+    border-radius: 20px;
+}
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--main-color);
+    height: 5px;
+    width: 25px;
+    border-radius: 50px;
+    border: 1px solid var(--main-color);
+    outline: var(--main-color);
+}
+
+/* ============ Protflio Section Nav and tabs ========= */
+.nav-pills .nav-link.active {
+    background-color: var(--main-color);
+    border-radius: 35px;
+    outline: var(--main-color);
+}
+
+.nav-pills .nav-link {
+    color: #000;
+    transition: all 0.5;
+    border-radius: 35px;
+    outline: var(--main-color);
+}
+
+.nav-pills .nav-link:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 35px;
+}
+.img-layer {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s;
+}
+.image:hover .img-layer{
+    opacity: 1;
+}
+.image img {
+    transition: all 0.7s;
+}
+.image:hover img {
+    transform: scale(1.4);
+}
+
+/* or intead of doing div inside div i can do ::before and ::after */
+/* .img-layer::after {
+    content: "Project Title";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+} */
+
+/* ================== blog ================ */
+
+.card-body a:hover {
+    color: var(--main-color) !important;
+}
+
+/* contact */
+
+.form-control {
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border: 2px solid var(--main-color);
+    box-shadow: none;
+}
+button.main-btn:hover{
+    background-color: #d8576f;
+    border-color: #d8576f;
+}
+
+/* ========== footer ============ */
+
+#footer {
+    background-color: #212121;
+}
+
+
+.fet {
+    background-color: #313131;
+    color: #ababab;
+    border: 1px solid #313131;
+}
+
+.fooot {
+    color: #ababab;
+}
